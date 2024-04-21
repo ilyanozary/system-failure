@@ -13,6 +13,26 @@
 # You should have received a copy of the GNU General Public License
 # along with this program; if not, write to the Free Software
 # Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
+# ilya nozary
+
+#for package...
+
+import pip
+
+def install(package):
+    if hasattr(pip, 'main'):
+        pip.main(['install', package])
+    else:
+        pip._internal.main(['install', package])
+
+
+if __name__ == '__main__':
+    install('pygame')
+
+if __name__ == '__main__':
+    install('argparse')
+
+
 
 import pygame
 import sys
